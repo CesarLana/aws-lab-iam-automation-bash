@@ -1,4 +1,4 @@
-# AWS Lab: Provisionamento em Massa de Usuários no IAM com Shell Script
+﻿# Lab AWS - Provisionamento em Lote de Usuarios IAM com Script Bash
 
 Prática realizada durante a formação **AWS re/Start (Escola da Nuvem)** para resolver o desafio de cadastrar dezenas de novos colaboradores na nuvem de forma ágil, padronizada e segura.
 
