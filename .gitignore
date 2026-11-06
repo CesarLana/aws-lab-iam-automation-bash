@@ -1,0 +1,22 @@
+# Ignore sensitive CSV files containing credentials and temporary passwords
+*.csv
+!*.csv.example
+!users.csv.example
+
+# AWS credentials and environment variables
+.env
+.env.*
+credentials
+*.pem
+*.key
+
+# Logs and execution traces
+*.log
+logs/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
