@@ -1,4 +1,4 @@
-﻿# Lab AWS - Provisionamento em Lote de Usuarios IAM com Script Bash
+# Lab AWS - Provisionamento em Lote de Usuarios IAM com Script Bash
 
 Prática realizada durante a formação **AWS re/Start (Escola da Nuvem)** para resolver o desafio de cadastrar dezenas de novos colaboradores na nuvem de forma ágil, padronizada e segura.
 
@@ -28,11 +28,11 @@ flowchart LR
 ## 🛠️ Passo a Passo da Configuração
 
 ### 1. Criar os Grupos de Usuários no Console (Console IAM)
-Antes de rodar o script, crie no console os grupos para os setores da empresa e anexe as políticas correspondentes:
+Antes de rodar o script, crie no console os grupos para os setores da empresa e anexe as políticas de menor privilégio (disponíveis na pasta `policies/` deste repositório):
 1. Acesse **IAM** > **Grupos de usuários** > **Criar grupo**.
-   - Grupo: `SuporteN1` -> anexar política de leitura (ex: `ReadOnlyAccess`).
-   - Grupo: `DBA` -> anexar política de banco de dados (ex: `AmazonRDSFullAccess`).
-   - Grupo: `Estagiarios` -> anexar política restrita para aprendizado.
+   - Grupo: `SuporteN1` -> anexar política de leitura personalizada (`policies/suporte-n1-policy.json`).
+   - Grupo: `DBA` -> anexar política gerenciada `AmazonRDSFullAccess`.
+   - Política Global: Anexar a política `policies/enforce-mfa-policy.json` aos grupos para bloquear qualquer ação até que o MFA seja ativado.
 
 ---
 
